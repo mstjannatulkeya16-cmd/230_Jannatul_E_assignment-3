@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/converter_page.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class HomePage extends StatelessWidget {
@@ -52,6 +53,37 @@ class HomePage extends StatelessWidget {
                 ),
               ),
             ),
+            Row(
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return ConverterPage();
+                        },
+                      ),
+                    );
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.blue,
+                    foregroundColor: Colors.white,
+                  ),
+                  child: Text("converter page"),
+                ),
+                SizedBox(width: 20),
+                OutlinedButton(onPressed: () {}, child: Text("OutlinedButton")),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: TextButton(
+                    onPressed: () {},
+                    style: TextButton.styleFrom(side: BorderSide()),
+                    child: Text("TextButton"),
+                  ),
+                ),
+              ],
+            ),
 
             SizedBox(
               height: 200,
@@ -71,6 +103,7 @@ class HomePage extends StatelessWidget {
                 ),
               ),
             ),
+
             SizedBox(
               height: 200,
               width: 200,

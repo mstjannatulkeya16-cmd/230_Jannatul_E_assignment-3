@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'home_page.dart'; // This tells Dart to look in the same folder
+import 'package:flutter_application_1/login_page.dart';
+
+// This tells Dart to look in the same folder
 
 void main() {
   runApp(const MyApp());
@@ -12,8 +14,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark(),
-      home: const HomePage(), // Matches the name in Home_page.dart
+      // theme: ThemeData.dark(),
+      home: const LoginPage(), // Matches the name in Login_page.dart
     );
   }
 }
